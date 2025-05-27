@@ -448,7 +448,7 @@ void ThickTracer8::followLines(cv::Mat& mat, std::vector<RasterPoint*>& pts,
 
     if (trc)
         for (i = 0; i < (int)pts.size(); i++) {
-            RasterPoint& pt = *pts[i];
+            const RasterPoint& pt = *pts[i];
             if (pt.type != crossingPoint) {
                 continue;
             }
@@ -456,7 +456,7 @@ void ThickTracer8::followLines(cv::Mat& mat, std::vector<RasterPoint*>& pts,
         }
     if (trc)
         for (i = 0; i < (int)pts.size(); i++) {
-            RasterPoint& pt = *pts[i];
+            const RasterPoint& pt = *pts[i];
             if (pt.type == crossingPoint) {
                 continue;
             }

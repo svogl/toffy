@@ -244,7 +244,7 @@ void ThickSkeletonizer::mergeMax(const Mat& thick, Mat& in) {
 						(x5<<4) | (x6<<5)| (x7<<6)| (x8<<7);
 			// int c = x1+x2+x3+x4+x5+x6+x7+x8;
 
-			struct action& a = actions[idx];
+			const struct action& a = actions[idx];
 			if (a.isKnown){
 
 				if (a.setPixel) {
@@ -588,7 +588,7 @@ int ThickSkeletonizer::skel_once(const Mat& in, Mat& skel) {
 						(x5<<4) | (x6<<5)| (x7<<6)| (x8<<7);
 //			int c = x1+x2+x3+x4+x5+x6+x7+x8;
 
-			struct action& a = skels[idx];
+			const struct action& a = skels[idx];
 			if (a.isKnown){
 
 				if (a.setPixel) {

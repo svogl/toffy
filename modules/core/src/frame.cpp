@@ -45,7 +45,7 @@ std::any Frame::getData(const std::string& key) const
     if (data.find(key) != data.end()) {
         try {
             out = data.at(key);
-        } catch (std::out_of_range& e) {
+        } catch (const std::out_of_range& e) {
             LOGW
                 << "Frame::getData(): Could not find key " << key;
         }

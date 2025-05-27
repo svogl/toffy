@@ -44,7 +44,7 @@ void Pruner::prune(const Segments& in, Segments& out)
                     seg.pruned = false;
                     out.push_back(*segIter);
                 }
-                segIter++;
+                ++segIter;
             }
         }
     }

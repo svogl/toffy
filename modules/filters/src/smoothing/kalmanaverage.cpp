@@ -144,7 +144,6 @@ bool KalmanAverage::filter(const toffy::Frame& in, toffy::Frame& /*out*/)
 
                 if (std::numeric_limits<float>::quiet_NaN() == imgptr[col] ||
                     (skipZeros && imgptr[col] <= 0.0)) {
-                    imgptr[col] = imgptr[col];  // nothing to estimate..
                     vKFpos++;
 
                     // kf.statePost.at<float>(0) =imgptr[col] ;

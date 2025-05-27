@@ -137,7 +137,7 @@ Filter* FilterFactory::getFilter(const std::string& name) const
 {
     try {
         return _filters.at(name);
-    } catch (std::out_of_range& e) {
+    } catch (const std::out_of_range& e) {
         LOGW << name << " not found.";
         return NULL;
     }
